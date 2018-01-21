@@ -1,0 +1,38 @@
+.header {
+  margin: 2rem 0;
+}
+
+.header-logo {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+
+.header-nav {
+  display: inline-block;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1.5rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}
+
+main.main {
+  margin: 12rem 0;
+}
+
+article {
+  h3 .subdued {
+    margin: 0 0 0 .8rem;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <title><%= current_page.data.title || "Skylar Anderson" %></title>
+
+    <link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag :site %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div class="header">
+      <div class="container">
+        <a href="/" class="header-logo">Skylar Anderson</a>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="mailto:skylar@anderson.is">Email</a></li>
+            <li><a href="http://github.com/sandersonet">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/skylaranderson">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <main class="main" role="main">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <% if defined?(google_analytics_universal_tag) %>
+      <%= google_analytics_universal_tag %>
+    <% end %>
+  </body>
+</html>
