@@ -100,64 +100,6 @@ a.header-logo {
   font-size: 1rem;
 }
 
-/* Larger than mobile */
-@media (min-width: 400px) {
-  .intro {
-    margin: 3rem 0;
-  }
-
-  html {
-    font-size: 13px;
-  }
-}
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-  .intro {
-    margin: 5rem 0;
-  }
-
-  html {
-    font-size: 14px;
-  }
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-  .intro {
-    margin: 7rem 0;
-  }
-  .container {
-    width: 70%;
-  }
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  .intro {
-    margin: 10rem 0;
-  }
-
-  html {
-    font-size: 14px;
-  }
-
-  .container {
-    width: 50%;
-  }
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-
-  .container {
-    width: 40%;
-  }
-}
-
 a.download-button {
   color: #fff;
   font-size: 1.1rem;
@@ -175,9 +117,9 @@ a.download-button {
   position: relative;
   font-size: 1rem;
   line-height:1.6rem;
-  margin: 0 0 1rem -4rem;
+  margin: 0 0 1rem;
   background: rgba(0,0,0,0.15);
-  padding: 1.7rem;
+  padding: 1.3rem 1.7rem;
   border-radius: 8px;
   margin-bottom: .5rem;
   transition-duration: 500ms;
@@ -201,6 +143,7 @@ a.download-button {
   height: 3rem;
   width: 3rem;
   border-radius: 1.5rem;
+  margin-left: -3rem;
   background: black;
   float: left;
   overflow: hidden;
@@ -213,31 +156,25 @@ a.download-button {
 }
 
 .reference-item__body {
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
 
 .reference-item__meta {
   font-size: 1rem;
   color: $color-subdued;
-  margin-bottom: .7rem;
+  margin-bottom: .5rem;
   margin-top:-.3rem;
 }
 
 
 .reference-item__controls {
-  position: absolute;
-  top: .5rem;
-  right: 1rem;
-  font-size: 1rem;
+  font-size: .8rem;
 
   .reference-item__control {
     color: $color-subdued;
-    font-size: .6rem;
     transition-duration:500ms;
   }
 }
-
-
 
 .reference-item:hover .reference-item__control {
   color: $blue;
@@ -278,5 +215,72 @@ a.download-button {
   }
   .reference-item__expand {
     display: none;
+  }
+}
+@media (min-width: 300px) {
+  main.main {
+    margin: 6rem 0;
+  }
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  main.main {
+    margin: 6rem 0;
+  }
+
+  .intro {
+    margin: 3rem 0;
+  }
+
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .reference-item {
+    margin-left: 0;
+  }
+
+  .intro {
+    margin: 5rem 0;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .intro {
+    margin: 7rem 0;
+  }
+  .container {
+    width: 70%;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .intro {
+    margin: 10rem 0;
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .reference-item {
+    margin-left: -4rem;
+  }
+
+  html {
+    font-size: 15px;
   }
 }
