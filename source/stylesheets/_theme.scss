@@ -173,11 +173,11 @@ a.download-button {
 .references {}
 .reference-item {
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height:1.6rem;
   margin: 0 0 1rem -4rem;
   background: rgba(0,0,0,0.15);
-  padding: 2rem;
+  padding: 1.7rem;
   border-radius: 8px;
   margin-bottom: .5rem;
   transition-duration: 500ms;
@@ -187,8 +187,9 @@ a.download-button {
 
   &:hover {
     background: rgba(0,0,0,0.4);
-    box-shadow: 0 0 7px rgba(0,0,0,0.14);
+    box-shadow: 0 0 18px rgba($blue, 0.5);
     border: 1px solid $blue;
+    transform: scale(1.05);
   }
 
   p:last-child {
@@ -219,17 +220,19 @@ a.download-button {
   font-size: 1rem;
   color: $color-subdued;
   margin-bottom: .7rem;
+  margin-top:-.3rem;
 }
 
 
 .reference-item__controls {
   position: absolute;
-  top: 1rem;
+  top: .5rem;
   right: 1rem;
   font-size: 1rem;
 
   .reference-item__control {
     color: $color-subdued;
+    font-size: .6rem;
     transition-duration:500ms;
   }
 }
