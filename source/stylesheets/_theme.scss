@@ -1,6 +1,7 @@
 $color-primary: #fff;
 $color-light: #9fb1c0;
 $color-subdued: #4c6380;
+$blue: blue;
 $background-color: #0c213b;
 
 html {
@@ -171,7 +172,28 @@ a.download-button {
 
 .references {}
 .reference-item {
-  margin: 0 0 1rem;
+  position: relative;
+  font-size: 1.2rem;
+  line-height:1.6rem;
+  margin: 0 0 1rem -4rem;
+  background: rgba(0,0,0,0.15);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: .5rem;
+  transition-duration: 500ms;
+  color: $color-light;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 0 7px rgba(0,0,0,0.14);
+    border: 1px solid $blue;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .reference-item__avatar {
@@ -180,11 +202,78 @@ a.download-button {
   border-radius: 1.5rem;
   background: black;
   float: left;
-  margin-right: 1rem;
+  overflow: hidden;
+  border: 2px $color-light;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
+
+  >img {
+    height: 100%;
+  }
 }
 
-.reference-item__body {}
-.reference-item__meta {}
-.reference-item__meta__date {}
-.reference-item__excerpt {}
-.reference-item__full {}
+.reference-item__body {
+  margin-left: 4rem;
+}
+
+.reference-item__meta {
+  font-size: 1rem;
+  color: $color-subdued;
+  margin-bottom: .7rem;
+}
+
+
+.reference-item__controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+
+  .reference-item__control {
+    color: $color-subdued;
+    transition-duration:500ms;
+  }
+}
+
+
+
+.reference-item:hover .reference-item__control {
+  color: $blue;
+}
+
+.reference-item__excerpt {
+
+}
+
+
+.reference-item__full {
+  display: none;
+
+}
+
+.reference-item__meta a {
+  float: right;
+}
+
+.reference-item--contracted {
+  .reference-item__contract {
+    display: none;
+  }
+  .reference-item__expand {
+    display: inline-block;
+  }
+}
+
+.reference-item--expanded {
+  .reference-item__excerpt {
+    display: none;
+  }
+  .reference-item__full {
+    display: block;
+  }
+  .reference-item__contract {
+    display: inline-block;
+  }
+  .reference-item__expand {
+    display: none;
+  }
+}

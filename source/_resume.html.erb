@@ -32,14 +32,17 @@
   </ul>
 
   <div class="references">
-    <div class="reference-item">
+    <div class="reference-item reference-item--contracted">
       <div class='reference-item__avatar'>
-
+        <img src="/images/testimonials/d.jpg" />
       </div>
       <div class="reference-item__body">
+        <div class="reference-item__controls">
+          <div class="reference-item__control reference-item__expand">+</div>
+          <div class="reference-item__control reference-item__contract">-</div>
+        </div>
         <div class="reference-item__meta">
-          <h3>Dustin McCormick</h3>
-          <div class="reference-item__meta__date">SEPT 2014</div>
+          Dustin McCormick - Sept 2014
         </div>
         <div class="reference-item__excerpt">
           I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
@@ -54,6 +57,71 @@
         </div>
       </div>
     </div>
+    <div class="reference-item">
+      <div class='reference-item__avatar'>
+        <img src="/images/testimonials/d.jpg" />
+      </div>
+      <div class="reference-item__body">
+        <div class="reference-item__meta">
+          Dustin McCormick - Sept 2014
+        </div>
+        <div class="reference-item__excerpt">
+          "I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim."
+        </div>
+        <div class="reference-item__full">
+          <p>
+            Skylar trained me as part of my onboarding with ExactTarget and I went on to work with him closely over the next couple of years. As my trainer and peer, Skylar was always very approachable and has a knack for explaining complex systems in a comprehensible manner. As an engineer I collaborated with regularly across teams, Skylar was a skilled communicator. This made working with him almost effortless. As for his engineering chops, he's simply top notch. I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
+          </p>
+          <p>
+            Between his personable, approachable demeanor and unmatched technical skills, I'd recommend Skylar for any role in technology.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="reference-item">
+      <div class='reference-item__avatar'>
+        <img src="/images/testimonials/d.jpg" />
+      </div>
+      <div class="reference-item__body">
+        <div class="reference-item__meta">
+          Dustin McCormick - Sept 2014
+        </div>
+        <div class="reference-item__excerpt">
+          I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
+        </div>
+        <div class="reference-item__full">
+          <p>
+            Skylar trained me as part of my onboarding with ExactTarget and I went on to work with him closely over the next couple of years. As my trainer and peer, Skylar was always very approachable and has a knack for explaining complex systems in a comprehensible manner. As an engineer I collaborated with regularly across teams, Skylar was a skilled communicator. This made working with him almost effortless. As for his engineering chops, he's simply top notch. I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
+          </p>
+          <p>
+            Between his personable, approachable demeanor and unmatched technical skills, I'd recommend Skylar for any role in technology.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="reference-item">
+      <div class='reference-item__avatar'>
+        <img src="/images/testimonials/d.jpg" />
+      </div>
+      <div class="reference-item__body">
+        <div class="reference-item__meta">
+          Dustin McCormick - Sept 2014
+        </div>
+        <div class="reference-item__excerpt">
+          I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
+        </div>
+        <div class="reference-item__full">
+          <p>
+            Skylar trained me as part of my onboarding with ExactTarget and I went on to work with him closely over the next couple of years. As my trainer and peer, Skylar was always very approachable and has a knack for explaining complex systems in a comprehensible manner. As an engineer I collaborated with regularly across teams, Skylar was a skilled communicator. This made working with him almost effortless. As for his engineering chops, he's simply top notch. I saw high-quality output from him consistently, and he'd often surprise me with something completely groundbreaking that he'd whipped up on a whim.
+          </p>
+          <p>
+            Between his personable, approachable demeanor and unmatched technical skills, I'd recommend Skylar for any role in technology.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </article>
 
@@ -127,3 +195,34 @@
   <h3>A.S. Computer Graphics Technology - Purdue University</h3>
   <h4>May 2008</h4>
 </article>
+
+<script type="text/javascript">
+
+  var ReferenceItem = function(node) {
+    this.expandedClass = 'reference-item--expanded';
+    this.contractedClass = 'reference-item--contracted';
+    this.node = node;
+    this.node.classList.add(this.contractedClass);
+    this.node.addEventListener('click', this.handleClick.bind(this))
+  }
+
+  ReferenceItem.prototype.handleClick = function() {
+    var expand = { add: this.expandedClass, remove: this.contractedClass };
+    var contract = { add: this.contractedClass, remove: this.expandedClass };
+    var operations = this.node.classList.contains(this.expandedClass) ? contract : expand;
+    var node = this.node;
+    Object.keys(operations).forEach(function(operation) {
+      var className = operations[operation];
+      node.classList[operation](className);
+    });
+  }
+
+
+  function onDomLoad() {
+    document.querySelectorAll('.reference-item').forEach(function(referenceItemNode) {
+      new ReferenceItem(referenceItemNode);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', onDomLoad, false);
+</script>
