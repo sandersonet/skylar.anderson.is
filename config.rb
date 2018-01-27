@@ -35,9 +35,11 @@ end
 # end
 
 # Build-specific configuration
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :asset_hash
   activate :google_analytics do |ga|
     ga.tracking_id = 'UA-75676190-1' # Replace with your property ID.
   end
