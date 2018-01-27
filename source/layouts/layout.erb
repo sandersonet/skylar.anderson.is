@@ -30,8 +30,8 @@
         <%= yield %>
       </div>
     </main>
-    <% if defined?(google_analytics_universal_tag) %>
-      <%= google_analytics_universal_tag %>
+    <% if defined?(google_analytics_tag) %>
+      <%= google_analytics_tag %>
     <% end %>
   </body>
 </html>
