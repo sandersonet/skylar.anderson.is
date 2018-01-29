@@ -1,7 +1,7 @@
 $color-primary: #fff;
 $color-light: #9fb1c0;
 $color-subdued: #4c6380;
-$blue: blue;
+$blue: #3692FF;
 $background-color: #0c213b;
 
 html {
@@ -106,9 +106,11 @@ a.download-button {
   border-bottom: 1px dotted rgba(255,255,255,0.3);
   padding: 8px 0;
   transition: all 0.5s ease;
+  margin-right: 15px;
 
   &:hover {
-    border-bottom: 1px dotted rgba(255,255,255,0.8);
+    border-bottom: 1px dotted $blue;
+    color: $blue;
   }
 }
 
