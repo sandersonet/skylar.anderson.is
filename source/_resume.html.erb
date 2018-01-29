@@ -507,10 +507,15 @@
     var contract = { add: this.contractedClass, remove: this.expandedClass };
     var operations = this.node.classList.contains(this.expandedClass) ? contract : expand;
     var node = this.node;
+
     Object.keys(operations).forEach(function(operation) {
       var className = operations[operation];
       node.classList[operation](className);
     });
+
+    var referenceNameNode = this.node.querySelectorAll('.reference-item__meta')[0];
+    var eventLabel = referenceNameNode.innerText;
+    ga('send', 'event', { eventCategory: 'View Reference', eventAction: 'click', eventLabel: eventLabel });
   }
 
 
