@@ -507,20 +507,17 @@
     var contract = { add: this.contractedClass, remove: this.expandedClass };
     var operations = this.node.classList.contains(this.expandedClass) ? contract : expand;
     var node = this.node;
-    var keys = Object.keys(operations);
-    for (var i = 0; i < keys.length ; i++) {
-      var operation = keys[i];
+    Object.keys(operations).forEach(function(operation) {
       var className = operations[operation];
       node.classList[operation](className);
-    }
+    });
   }
 
 
   function onDomLoad() {
-    var items = document.querySelectorAll('.reference-item')
-    for(var i = 0; i < items.length ; i++) {
-      new ReferenceItem(items[i]);
-    }
+    Array.from(document.querySelectorAll('.reference-item')).forEach(function(referenceItemNode) {
+      new ReferenceItem(referenceItemNode);
+    });
   }
 
   document.addEventListener('DOMContentLoaded', onDomLoad, false);
